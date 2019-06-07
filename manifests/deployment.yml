@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: cfharyadipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cfharyadipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cfharyadipipelinesjavascriptdocker 
+          image: myappcontainerregistry.azurecr.io/cfharyadipipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
